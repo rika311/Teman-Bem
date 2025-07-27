@@ -1,0 +1,36 @@
+.hero-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #dfe9f3, #ffffff);
+  border-radius: 20px;
+  margin: 15px;
+
+  .logo-bem {
+    width: 120px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .moto {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  .intro {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+}
+
+ion-card {
+  margin: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}

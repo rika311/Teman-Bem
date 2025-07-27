@@ -1,0 +1,67 @@
+.login-page {
+  --background: linear-gradient(135deg, #44b6c5, #cc3e6d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-card {
+  background: rgb(14, 13, 13);
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  ion-item {
+    margin-bottom: 16px;
+    --background: #f8f8f8;
+    --border-radius: 12px;
+    padding-inline: 6px;
+  }
+
+  ion-input {
+    font-size: 15px;
+  }
+
+  ion-button {
+    height: 45px;
+    --border-radius: 24px;
+    --background: linear-gradient(to right, #42a5f5, #7b1fa2);
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .footer-text {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #777;
+
+    a {
+      color: #42a5f5;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

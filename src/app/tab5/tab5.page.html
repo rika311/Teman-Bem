@@ -1,0 +1,45 @@
+<ion-content color="dark">
+  <ion-list *ngIf="announcements.length > 0; else kosong">
+    <ion-card *ngFor="let item of announcements" class="announcement-card">
+      <ion-card-header>
+        <ion-card-title>{{ item.title }}</ion-card-title>
+        <ion-card-subtitle>{{ item.date }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        {{ item.content }}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+ 
+    <ion-list>
+    <ion-card *ngFor="let item of pengumuman" class="announcement-card">
+      <ion-card-header>
+        <ion-card-title>{{ item.judul }}</ion-card-title>
+        <ion-card-subtitle>{{ item.tanggal }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        {{ item.isi }}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  
+  <ng-template #kosong>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Tidak ada pengumuman</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Saat ini belum ada pengumuman terbaru. Silakan cek kembali nanti.
+      </ion-card-content>
+      <ion-button expand="block" color="primary" routerLink="/tabs/tab1">
+        Kembali ke Beranda
+      </ion-button>
+    </ion-card>
+
+  </ng-template>
+</ion-content>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Pengumuman</ion-title>
+  </ion-toolbar>  
+</ion-header>

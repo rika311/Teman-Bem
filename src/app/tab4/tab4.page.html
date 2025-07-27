@@ -1,0 +1,52 @@
+<ion-tab-bar slot="bottom">
+  ...
+  <ion-tab-button tab="tab5">
+    <ion-icon name="megaphone-outline"></ion-icon>
+    <ion-label>Pengumuman</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Pojok Aspirasi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Kirim Aspirasi Kamu</ion-card-title>
+      <ion-card-subtitle>Suara Mahasiswa, Perubahan Nyata</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nama Lengkap</ion-label>
+        <ion-input [(ngModel)]="nama" [disabled]="anonim"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Anonym</ion-label>
+        <ion-checkbox slot="end" [(ngModel)]="anonim"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Tulis Aspirasi Kamu</ion-label>
+        <ion-textarea rows="5" [(ngModel)]="isiAspirasi"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" color="success" (click)="kirimAspirasi()">
+        Kirim Aspirasi
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let asp of daftarAspirasi">
+    <ion-card-header>
+      <ion-card-title>{{ asp.nama }}</ion-card-title>
+      <ion-card-subtitle>{{ asp.waktu | date:'medium' }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{ asp.isi }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-content class="ion-padding register-page">
+
+  <div class="header">
+    <h2>Buat Akun</h2>
+    <p>Daftar untuk bergabung</p>
+  </div>
+
+  <ion-item>
+    <ion-icon name="person" slot="start"></ion-icon>
+    <ion-input [(ngModel)]="name" placeholder="Nama Lengkap"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="mail" slot="start"></ion-icon>
+    <ion-input [(ngModel)]="email" type="email" placeholder="Email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="lock-closed" slot="start"></ion-icon>
+    <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" shape="round" (click)="register()">Daftar</ion-button>
+
+  <div class="footer">
+    <p>Sudah punya akun? <a (click)="goToLogin()">Login di sini</a></p>
+  </div>
+</ion-content>

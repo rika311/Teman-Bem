@@ -1,0 +1,42 @@
+<ion-header> 
+  <ion-toolbar> 
+    <ion-title>Data Registrasi BEM</ion-title> 
+  </ion-toolbar> 
+</ion-header> 
+ 
+<ion-content> 
+ <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)"> 
+  <ion-refresher-content 
+    pullingIcon="arrow-dropdown" 
+    pullingText="Pull to refresh" 
+    refreshingSpinner="circles" 
+    refreshingText="Refreshing..."> 
+  </ion-refresher-content> 
+</ion-refresher>  -->
+
+<ion-card *ngFor="let Registrasi of Regis"> 
+  <ion-card-header> 
+    <ion-card-subtitle>Prodi: {{Registrasi.prodi}}
+    </ion-card-subtitle> 
+    <ion-card-title>{{Registrasi.nama}}</ion-card-title> 
+    <ion-card-title>{{Registrasi.nim}}</ion-card-title>
+  </ion-card-header> 
+ 
+  <ion-card-content> 
+    Stambuk: {{Registrasi.stambuk}}
+    IPK: {{Registrasi.IPK}}
+    Email: {{Registrasi.email}},
+    alasan: {{Registrasi.alasan}},
+    nohp: {{Registrasi.nohp}},
+    pengalaman: {{Registrasi.pengalaman}},
+  </ion-card-content> 
+</ion-card> 
+ 
+<ion-infinite-scroll  (ionInfinite)="loadData($event)"> 
+  <ion-infinite-scroll-content 
+    loadingSpinner="bubbles" 
+    loadingText="Loading more data..."> 
+  </ion-infinite-scroll-content> 
+</ion-infinite-scroll> 
+ 
+</ion-content> 

@@ -1,0 +1,110 @@
+<ion-header> 
+  <ion-toolbar> 
+      <ion-title>Registrasi Pendaftaran BEM</ion-title> 
+      <ion-buttons slot="start"> 
+        <ion-back-button></ion-back-button> 
+      </ion-buttons> 
+    </ion-toolbar> 
+</ion-header> 
+ 
+<ion-content padding> 
+  <ion-card class="welcome-card bg-content"> 
+    <ion-card-header> 
+      <ion-card-title color="primary">Registrasi Pendaftaran BEM</ion-card-title> 
+    </ion-card-header> 
+    <ion-card-content> 
+      <p>silahkan isi formulir dibawah ini.</p> 
+ 
+        <ion-list> 
+          <ion-item> 
+            <ion-label position="floating"> Nama lengkap </ion-label> 
+            <ion-input type="text" [(ngModel)]="nama"></ion-input> 
+          </ion-item> 
+          <ion-item> 
+            <ion-label position="floating"> NIM </ion-label> 
+            <ion-input type="text" [(ngModel)]="nim"></ion-input>
+          </ion-item>
+          <ion-item> 
+            <ion-label position="floating"> Stambuk </ion-label> 
+           <ion-select [(ngModel)]="stambuk" class="popover-content"  
+placeholder="Pilih stambuk">
+              <ion-select-option value="2020">2020</ion-select-option>
+              <ion-select-option value="2021">2021</ion-select-option>
+              <ion-select-option value="2022">2022</ion-select-option>
+              <ion-select-option value="2023">2023</ion-select-option>
+              <ion-select-option value="2024">2024</ion-select-option>
+              <ion-select-option value="2025">2025</ion-select-option>
+              <ion-select-option value="2026">2026</ion-select-option>
+           </ion-select>
+          </ion-item>
+          <ion-item> 
+            <ion-label position="floating"> Alamat </ion-label> 
+            <ion-input type="text" [(ngModel)]="alamat"></ion-input>
+          </ion-item>
+          <ion-item> 
+            <ion-label position="floating"> Tempat Lahir </ion-label> 
+            <ion-input type="text" [(ngModel)]="tempatlahir"></ion-input>
+          </ion-item>
+          <ion-item> 
+            <ion-label  position="fixed"> Tanggal Lahir </ion-label> 
+          
+          <ion-datetime presentation="date" [preferWheel]="true" [(ngModel)]="tanggallahir"></ion-datetime>
+          </ion-item>
+ 
+          <ion-item> 
+            <ion-label position="floating"> Nomor HP/WA </ion-label> 
+            <ion-input type="text" [(ngModel)]="nohp"></ion-input> 
+          </ion-item> 
+ 
+          <ion-item> 
+            <ion-label position="floating"> Email </ion-label> 
+            <ion-input type="email" [(ngModel)]="email"></ion-input> 
+          </ion-item> 
+         
+          <ion-item> 
+            <ion-label position="floating"> Prodi </ion-label> 
+            <ion-select [(ngModel)]="prodi" class="popover-content"  
+placeholder="Pilih prodi"> 
+              <ion-select-option value="Teknik Informatika (S1)">Teknik Informatika 
+(S1)</ion-select-option> 
+              <ion-select-option value="Sistem Informasi (S1)">Sistem Informasi 
+(S1)</ion-select-option> 
+              <ion-select-option value="Rekayasa Perangkat Lunak (S1)">Rekayasa 
+Perangkat Lunak (S1)</ion-select-option> 
+              <ion-select-option value="Teknologi Informasi (S1)">Teknologi 
+Informasi (S1)</ion-select-option> 
+              <ion-select-option value="Teknik Elektro (S1)">Teknik Elektro 
+(S1)</ion-select-option> 
+              <ion-select-option value="Manajemen Informatika (D3)">Manajemen 
+Informatika (D3)</ion-select-option> 
+              <ion-select-option value="Teknik Informatika (D3)">Teknik Informatika 
+(D3)</ion-select-option> 
+              <ion-select-option value="Akuntansi (D3)">Akuntansi (D3)</ion-select-option> 
+            </ion-select>
+          </ion-item>
+         <ion-item>
+            <ion-label position="floating"> IPK </ion-label>
+            <ion-input type="text" [(ngModel)]="IPK"></ion-input>
+          </ion-item>
+
+          <ion-item> 
+            <ion-label position="floating"> Alasan mendaftar </ion-label> 
+            <ion-textarea rows="3" [(ngModel)]="alasan"></ion-textarea>
+          </ion-item>
+          <ion-item> 
+            <ion-label position="floating"> Pengalaman organisasi </ion-label> 
+            <ion-textarea rows="3" [(ngModel)]="pengalaman"></ion-textarea>
+          </ion-item>
+         
+        </ion-list> 
+ 
+        <div padding> 
+          <ion-button expand="block" color="primary" size="medium" 
+          (click)="addRegister()"><ion-icon name="trending-up-outline"></ion-icon> 
+Daftar</ion-button> 
+           
+        </div> 
+      </ion-card-content>   
+    </ion-card> 
+ 
+</ion-content> 
