@@ -1,0 +1,7 @@
+{
+  "name": "temanbem",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
